@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: convert video
         run: |
-          apt-get install youtube-dl -y
+          sudo apt-get install youtube-dl -y
           youtube-dl 'http://store.zjuyk.site/Movies/Hitler%20The%20Raise%20Of%20Evil/Hitler%20The%20Rise%20Of%20Evil.avi'
           ffmpeg -i 'Hitler The Rise Of Evil.avi' 'Hitler The Rise Of Evil.mp4'
       - name: upload

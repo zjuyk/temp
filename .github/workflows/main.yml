@@ -1,1 +1,21 @@
-
+name: Test
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: convert video
+        run: |
+          apt install youtube-dl
+          youtube-dl 'http://store.zjuyk.site/Movies/Hitler%20The%20Raise%20Of%20Evil/Hitler%20The%20Rise%20Of%20Evil.avi'
+          ffmpeg -i 'Hitler The Rise Of Evil.avi' 'Hitler The Rise Of Evil.mp4'
+      - name: upload
+        # You may pin to the exact commit or the version.
+        # uses: umuthan/video-converter@ad753f854ba38ddabb382233c254579e31b3df75
+        uses: ncipollo/release-action@v1.7.3
+        with:
+          allowUpdates: true
+          tag: "video"
+          artifacts: "./*.mp4"
+          token: ${{ secrets.GITHUB_TOKEN }}  
+          

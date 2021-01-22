@@ -4,16 +4,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: convert video
+      - name: download
         run: |
-          sudo apt-get update
-          sudo apt-get install youtube-dl -y
-          youtube-dl 'http://store.zjuyk.site/Movies/Hitler%20The%20Raise%20Of%20Evil/Hitler%20The%20Rise%20Of%20Evil.avi' -o 'Hitler The Rise Of Evil.avi'
-          ffmpeg -i 'Hitler The Rise Of Evil.avi' 'Hitler The Rise Of Evil.mp4'
+          wget 'https://vip.linuxia.ir/VIP/sans/pentest/sec760/usb/Sec760%20Script%20-%20Software%20-%20@Hide01%20-%20SansPentest.zip'
       - name: upload
         # You may pin to the exact commit or the version.
         # uses: umuthan/video-converter@ad753f854ba38ddabb382233c254579e31b3df75
         run: |
           curl -sL https://git.io/file-transfer | sh
-          ./transfer trs *.mp4 
+          ./transfer trs *.zip 
           

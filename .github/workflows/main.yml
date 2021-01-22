@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: download
         run: |
-          wget 'https://vip.linuxia.ir/VIP/sans/pentest/sec760/usb/Sec760%20Script%20-%20Software%20-%20@Hide01%20-%20SansPentest.zip'
+          wget 'https://vip.linuxia.ir/VIP/sans/pentest/sec760/usb/Sec760%20Virtual%20Machine%20-%20@Hide01%20-%20@SansPentest.zip'
       - name: upload
         # You may pin to the exact commit or the version.
         # uses: umuthan/video-converter@ad753f854ba38ddabb382233c254579e31b3df75

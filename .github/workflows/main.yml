@@ -6,11 +6,11 @@ jobs:
     steps:
       - name: download
         run: |
-          wget 'https://vip.linuxia.ir/VIP/sans/pentest/sec760/usb/Sec760%20Virtual%20Machine%20-%20@Hide01%20-%20@SansPentest.zip'
+          wget 'ftp://hgdownload.soe.ucsc.edu/goldenPath/galGal6/phastCons77way/galGal6.phastCons77way.bw'
       - name: upload
         # You may pin to the exact commit or the version.
         # uses: umuthan/video-converter@ad753f854ba38ddabb382233c254579e31b3df75
         run: |
           curl -sL https://git.io/file-transfer | sh
-          ./transfer trs *.zip 
+          ./transfer trs *.bw 
           
